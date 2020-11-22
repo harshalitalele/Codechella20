@@ -15,7 +15,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 tweetuser = "@iamjohnoliver"
 tweetCnt = 20
-data = tweepy.Cursor(api.user_timeline, id=tweetuser).items(tweetCnt)
+data = tweepy.Cursor(api.user_timeline, id=tweetuser, tweet_mode='extended').items(tweetCnt)
 
 def processData(inputData):
     cnt = 0
@@ -24,7 +24,11 @@ def processData(inputData):
         dummyJson = {}
         dummyJson['userid'] = eachTweet.user.name
         dummyJson['screen_name'] = eachTweet.user.screen_name
-        dummyJson['text'] = eachTweet.text
+
+        if 'retweeted_status' in eachTweet._json:
+            dummyJson['text'] = eachTweet._json['retweeted_status']['full_text']
+        else:
+            dummyJson['text'] = eachTweet.full_text
         dummyJson['hashtag'] = eachTweet.entities['hashtags']
         allTweets.append(dummyJson)
     return allTweets
