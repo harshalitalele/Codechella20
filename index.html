@@ -49,8 +49,10 @@
 			.content div {
 				margin-bottom: 5px;
 			}
-			.fact, .opinion {
+			.fact-opinion {
 				float: right;
+			}
+			.fact, .opinion {
 				padding: 5px;
 				border-radius: 5px;
 			}
@@ -59,6 +61,11 @@
 			}
 			.opinion {
 				background-color: yellow;
+			}
+			.disclaimer {
+				font-size: 12px;
+				color: gray;
+				margin-top: 15px;
 			}
 		</style>
 	</head>
@@ -73,7 +80,10 @@
 					<div class="user-name">
 						Last Week Tonight 
 						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
-						<span class="opinion">Opinion</span>
+						<span class="fact-opinion">
+							<span class="opinion">Opinion</span></br>
+							<span class="disclaimer">by Author</span>
+						</span>
 					</div>
 					<div class="tweet-handle">@LastWeekTonight</div>
 					<div class="tweet-text">
@@ -90,7 +100,10 @@
 					<div class="user-name">
 						Last Week Tonight 
 						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
-						<span class="opinion">Opinion</span>
+						<span class="fact-opinion">
+							<span class="opinion">Opinion</span></br>
+							<span class="disclaimer">by Author</span>
+						</span>
 					</div>
 					<div class="tweet-handle">@LastWeekTonight</div>
 					<div class="tweet-text">
@@ -107,7 +120,10 @@
 					<div class="user-name">
 						Last Week Tonight 
 						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
-						<span class="fact">Fact</span>
+						<span class="fact-opinion">
+							<span class="fact">Fact</span></br>
+							<span class="disclaimer">by Author</span>
+						</span>
 					</div>
 					<div class="tweet-handle">@LastWeekTonight</div>
 					<div class="tweet-text">
