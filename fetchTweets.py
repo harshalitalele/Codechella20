@@ -13,7 +13,9 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-data = tweepy.Cursor(api.user_timeline, id="AmitShah").items(1)
+tweetuser = "@AOC"
+tweetCnt = 20
+data = tweepy.Cursor(api.user_timeline, id=tweetuser).items(tweetCnt)
 
 def processData(inputData):
     cnt = 0
@@ -29,4 +31,11 @@ def processData(inputData):
 
 res = processData(data)
 
-print(res)
+f = open(tweetuser + ".json", "w", encoding="utf-8")
+content = "["
+content += str(res)
+content += "]"
+f.write(content)
+f.close()
+
+#print(res)
