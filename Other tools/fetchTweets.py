@@ -13,7 +13,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-tweetuser = "@cnnbrk"
+tweetuser = "@iamjohnoliver"
 tweetCnt = 20
 data = tweepy.Cursor(api.user_timeline, id=tweetuser).items(tweetCnt)
 
