@@ -7,12 +7,114 @@
 			.timeline {
 				width: 700px;
 				margin: auto;
+				border-radius: 5px;
+				background-color: white;
+			}
+			.timeline-header {
+				padding: 10px;
+				font-size: 25px;
+				border-bottom: 1px solid gray;
+			}
+			.twitter-card {
+				padding: 10px;
+				border-bottom: 1px solid gray;
+			}
+			.icon, .content {
+				display: inline-block;
+			}
+			.icon {
+				width: 10%;
+				vertical-align: top;
+			}
+			.content {
+				width: 89%;
+			}
+			.icon-img {
+				border-radius: 50%;
+			}
+			.verified-img {
+				height: 15px;
+				width: 15px;
+			}
+			.user-name{
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.tweet-handle {
+				color: gray;
+			}
+			.tweet-text {
+				font-size: 25px;
+			}
+			.content div {
+				margin-bottom: 5px;
+			}
+			.fact, .opinion {
+				float: right;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			.fact {
+				background-color: green;
+			}
+			.opinion {
+				background-color: yellow;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="timeline" id="custom-timeline">
+			<div class="timeline-header">Tweets by John Oliver</div>
+			<div class="twitter-card">
+				<div class="icon">
+					<img class="icon-img" src="https://pbs.twimg.com/profile_images/1088880909628129293/TRZSDdA4_normal.jpg"/>
+				</div>
+				<div class="content">
+					<div class="user-name">
+						Last Week Tonight 
+						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
+						<span class="opinion">Opinion</span>
+					</div>
+					<div class="tweet-handle">@LastWeekTonight</div>
+					<div class="tweet-text">
+						Hello to all our new viewers who've encountered our 2019 segment on voting machines through conservative media using it to push Trump's voter-fraud claims! First: sorry we swear so much! But second: the way people are using that segment is horseshit!
+					</div>
+				</div>
+			</div>
 			
+			<div class="twitter-card">
+				<div class="icon">
+					<img class="icon-img" src="https://pbs.twimg.com/profile_images/1088880909628129293/TRZSDdA4_normal.jpg"/>
+				</div>
+				<div class="content">
+					<div class="user-name">
+						Last Week Tonight 
+						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
+						<span class="opinion">Opinion</span>
+					</div>
+					<div class="tweet-handle">@LastWeekTonight</div>
+					<div class="tweet-text">
+						Thank you for watching the show this season. It’s been a truly terrible year, and we’re so happy we could continue to share at least a little bit of joy together. Including, but not limited to, blowing 2020 the fuck up. https://t.co/S7iueB8ZzS
+					</div>
+				</div>
+			</div>
+			
+			<div class="twitter-card">
+				<div class="icon">
+					<img class="icon-img" src="https://pbs.twimg.com/profile_images/1088880909628129293/TRZSDdA4_normal.jpg"/>
+				</div>
+				<div class="content">
+					<div class="user-name">
+						Last Week Tonight 
+						<img class="verified-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" />
+						<span class="fact">Fact</span>
+					</div>
+					<div class="tweet-handle">@LastWeekTonight</div>
+					<div class="tweet-text">
+						All of this is true https://t.co/wDarDLbBmH
+					</div>
+				</div>
+			</div>
 			
 			
 			<!--<a class="twitter-timeline" href="https://twitter.com/iamjohnoliver?ref_src=twsrc%5Etfw">Tweets by John Oliver</a>
